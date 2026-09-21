@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Unit Converter</title>
+  </head>
+  <body>
+    <h1>Unit Converter</h1>
+    <div class="tab">
+      <button
+        class="tab-link active"
+        name="type"
+        onclick="selectTab(event, 'length')"
+      >
+        Length
+      </button>
+      <button class="tab-link" name="type" onclick="selectTab(event, 'weight')">
+        Weight
+      </button>
+      <button
+        class="tab-link"
+        name="type"
+        onclick="selectTab(event, 'temperature')"
+      >
+        Temperature
+      </button>
+    </div>
+    <form id="converter-form" class="converter-form">
+      <label for="value">Value</label>
+      <input type="text" placeholder="Enter Value" required name="value" />
+      <label for="from">From</label>
+      <select name="from" class="unit-dropdown"></select>
+      <label for="to">To</label>
+      <select name="to" class="unit-dropdown"></select>
+      <p id="result"></p>
+      <button type="submit" id="convert" class="convert-button">Convert</button>
+    </form>
+  </body>
+  <script src="index.js"></script>
+</html>
